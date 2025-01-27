@@ -1,10 +1,10 @@
-# Name of project
+# catherine-lin
 
-> A longer description
+My portfolio website
 
 ## Table of contents
 
-- [Name of project](#name-of-project)
+- [catherine-lin](#catherine-lin)
   - [Table of contents](#table-of-contents)
   - [General info](#general-info)
   - [Screenshots](#screenshots)
