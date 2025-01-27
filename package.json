@@ -1,0 +1,27 @@
+{
+  "name": "template-html-css",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "format": "prettier --write ./",
+    "format:check": "prettier --check ./",
+    "spell-check": "cspell  \"./**\"",
+    "lint:ls": "ls-lint",
+    "lint:md": "markdownlint --config ./.markdownlint.jsonc ./ ",
+    "lint:css": "stylelint \"./**/*.css\"",
+    "validate:html": "html-validate ./",
+    "accessibility": "achecker"
+  },
+  "author": "DeNepo",
+  "license": "MIT",
+  "devDependencies": {
+    "@ls-lint/ls-lint": "^2.0.0",
+    "accessibility-checker": "^3.1.48",
+    "cspell": "^6.31.1",
+    "html-validate": "^7.18.0",
+    "markdownlint-cli": "^0.34.0",
+    "prettier": "^2.8.8",
+    "stylelint": "^15.6.2",
+    "stylelint-config-standard": "^33.0.0"
+  }
+}
