@@ -1,0 +1,74 @@
+*,
+* ::before,
+* ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #efefef;
+  --text-color: #242321;
+}
+
+body,
+html {
+  height: 100vh;
+}
+
+/* ====== navigation bar ====== */
+
+.navbar {
+  height: 80px;
+  padding: 1em;
+  display: flex;
+  position: sticky;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+ul > li {
+  display: inline;
+  margin-left: 1em;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 1;
+  position: relative;
+}
+
+li a {
+  color: #242321;
+  text-decoration: none;
+}
+
+li:hover {
+  transform: translateY(2px);
+  text-shadow: 1px 5px 1px #0005;
+}
+
+li:hover::after {
+  content: url("../public/assets/hover-gold.svg");
+  height: 2px;
+  width: 2px;
+  opacity: 0.8;
+  position: absolute;
+  left: 10px;
+}
+
+li:active {
+  font-weight: 800;
+}
