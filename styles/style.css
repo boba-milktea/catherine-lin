@@ -17,6 +17,17 @@ html {
   line-height: 1.5;
 }
 
+.container {
+  padding: 2em;
+  margin: 0 auto;
+}
+
+p {
+  font-family: Lora, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
 /* ============ navigation bar ========= */
 
 .navbar {
@@ -76,58 +87,127 @@ li:active {
 }
 
 /* ============ hero section ========= */
+
 section.hero {
   display: grid;
   padding-block: 7rem;
-  height: 100svh;
+  height: 800px;
   position: relative;
   overflow-x: clip;
 }
 
 .hero img {
   grid-column: 1/-1;
+  width: 80%;
+  height: 80%;
   inset: 0;
-  width: 100%;
-  opacity: 0.6;
+  opacity: 0.8;
   position: absolute;
-  object-fit: cover;
+  object-fit: contain;
   z-index: -1;
-  transform-origin: bottom;
-  animation: hero-animation linear forwards;
-  animation-timeline: view();
-  animation-range: exit;
 }
 
 .hero .content {
   padding: 2em;
   position: absolute;
   top: 15%;
-  right: 0;
+  width: 100%;
   color: white;
   text-align: center;
-  background-color: rgba(0, 0, 0, 70%);
-  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.9);
   animation: fade-out linear;
   animation-timeline: view();
-  animation-range: exit -500px;
+  animation-range: exit -300px;
 }
 
 h1 {
   font-family: "Playfair Display", serif;
   font-weight: 800;
-  font-size: 5vw;
-  text-shadow: 2px 2px 2px #000;
+  font-size: 8vw;
 }
 
-.content p {
+.hero p {
   margin-top: 1.25em;
-  font-family: Lora, sans-serif;
-  font-size: 1rem;
   padding: 0 1em;
-  text-shadow: 2px 2px 2px #000;
 }
 
-/* animation */
+/* ============ about me section ========= */
+
+#about-me {
+  height: 800px;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about-me h2 {
+  font-family: "Playfair Display", serif;
+  color: var(--text-color);
+  font-size: 3rem;
+}
+
+#about-me p {
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+#about-me .my-photo {
+  margin-top: 2em;
+  width: 60%;
+  position: relative;
+}
+
+.my-photo img {
+  border-radius: 50%;
+  opacity: 0.1;
+  width: 100%;
+}
+
+.my-photo .colored-photo {
+  position: absolute;
+  background-image: url("../public/assets/catherine-colorised.png");
+  background-size: contain;
+  inset: 0;
+  opacity: 0.1;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+
+  mask-image: url(../public/assets/mask-video.gif);
+  mask-size: cover;
+  mask-position: center;
+  transform-origin: top;
+  animation: add-animation linear forwards;
+}
+
+#about-me .content {
+  margin-top: 3em;
+}
+
+/* ================== animation ================= */
+@supports (animation-timeline: view()) {
+  .hero img {
+    transform-origin: top;
+    animation: hero-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit -200px;
+  }
+
+  .about-me img {
+    transform-origin: top;
+    animation: about-me-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit -300px;
+  }
+}
+
+@keyframes add-animation {
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fade-out {
   95% {
     scale: 1.2;
@@ -145,14 +225,49 @@ h1 {
 
   80%,
   100% {
-    opacity: 1;
-    scale: 3;
+    opacity: 0.2;
+    scale: 1.5;
   }
 }
 
 /* ========== responsive design ========== */
 
-@media screen and (width >= 600px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 6vw;
+  }
+
+  ul > li {
+    font-size: 1.5rem;
+  }
+
+  .hero .content {
+    max-width: 800px;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  #about-me {
+    flex-direction: row;
+  }
+
+  #about-me .content {
+    max-width: 500px;
+    padding: 0 1em;
+  }
+
+  #about-me p {
+    font-size: 1.45rem;
+  }
+}
+
+@media (min-width: 1024px) {
   .navbar {
     justify-content: space-between;
     padding: 0 1.2em;
@@ -163,7 +278,7 @@ h1 {
   }
 
   h1 {
-    font-size: 3vw;
+    font-size: 4rem;
   }
 
   .content p {
@@ -171,6 +286,31 @@ h1 {
   }
 
   .hero .content {
-    max-width: 900px;
+    color: var(--text-color);
+    background: none;
+    right: 0;
+    max-width: 800px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+  #about-me {
+    flex-direction: row;
+  }
+
+  #about-me .content {
+    max-width: 1200px;
+    margin: 0;
+    padding: 2em;
+  }
+
+  #about-me p {
+    font-size: 1.3rem;
   }
 }

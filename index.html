@@ -1,55 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catherine's Portfolio</title>
 
-    <link href="./styles/index.css" rel="stylesheet" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catherine's Portfolio</title>
 
-  <body>
-    <header>
-      <div class="navbar">
-        <img src="./public/assets/logo.png" alt="" class="logo" />
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#word">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+  <link href="./styles/index.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <img src="./public/assets/logo.png" alt="" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#word">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="./public/assets/hero-illustration.png" alt="back and gold paint" />
+      <div class="content">
+        <h1>Hello! <br />I'm Catherine</h1>
+        <p>
+          A passionate web developer with a flair for marketing. I enjoy
+          turning innovative ideas into visually stunning and highly
+          functional websites. Always on the lookout for new learning
+          opportunities and challenges, my portfolio serves as a playground
+          for my work. It demonstrates my commitment to delivering exceptional
+          digital experiences.
+        </p>
       </div>
-    </header>
-    <main>
-      <section class="hero">
-        <img
-          src="./public/assets/hero-background.jpg"
-          alt="black and white background"
-        />
-        <div class="content">
-          <h1>Hello! <br />I'm Catherine</h1>
-          <p>
-            A passionate web developer with a flair for marketing. I enjoy
-            turning innovative ideas into visually stunning and highly
-            functional websites. Always on the lookout for new learning
-            opportunities and challenges, my portfolio serves as a playground
-            for my work. It demonstrates my commitment to delivering exceptional
-            digital experiences.
-          </p>
-        </div>
-      </section>
-      <section id="about-me"></section>
-      <section id="work"></section>
-      <section id="contact"></section>
-    </main>
-  </body>
+    </section>
+    <section class="about-me container" id="about-me">
+      <div class="content">
+        <h2>About Me</h2>
+        <p>
+          Hello! I’m Catherine, a front-end developer based in Belgium with a
+          vibrant background in marketing and a genuine passion for creating
+          intuitive digital experiences. Over the past nine years, I've honed
+          my skills in HTML, CSS, JavaScript, and React, continually driven by
+          the joy of turning complex problems into elegant solutions.
+        </p>
+        <p>
+          Having studied digital media, I thrive on the challenge of blending
+          technical functionality with aesthetic appeal to make websites that
+          are not only beautiful but truly user-friendly.
+        </p>
+        <p>
+          Feel free to take a look around my portfolio to see the projects I'm
+          most proud of. I love what I do, and I'm excited to share it with
+          you.
+        </p>
+      </div>
+      <div class="my-photo">
+        <div class="colored-photo"></div>
+        <img src="./public/assets/catherine.png" alt="Catherine's photo" />
+      </div>
+    </section>
+    <section id="work"></section>
+    <section id="contact"></section>
+  </main>
+</body>
+
 </html>
