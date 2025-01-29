@@ -15,7 +15,8 @@
     "Verwijs",
     "Todos",
     "wireframe",
-    "Playfair"
+    "Playfair",
+    "colorised"
   ],
   "ignorePaths": [
     "node_modules/**",

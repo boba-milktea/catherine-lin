@@ -59,7 +59,7 @@ This feature is developed on a branch `about-me-section`.
 - Add `h2` with title "About Me"
 - Add `p` with a brief biography or introduction
 - Add `img` for profile picture
-- Add `i` tags fro the icons
+- Add `i` tags for the icons
 
 #### CSS
 
