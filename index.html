@@ -1,148 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catherine's Portfolio</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catherine's Portfolio</title>
+    <link href="./styles/index.css" rel="stylesheet" />
+  </head>
 
-  <link href="./styles/index.css" rel="stylesheet" />
-</head>
-
-<body>
-  <header>
-    <div class="navbar">
-      <img src="./public/assets/logo.png" alt="" class="logo" />
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section class="hero">
-      <img src="./public/assets/hero-illustration.png" alt="back and gold paint" />
-      <div class="content">
-        <h1>Hello! <br />I'm Catherine</h1>
-        <p>
-          A passionate web developer with a flair for marketing. I enjoy
-          turning innovative ideas into visually stunning and highly
-          functional websites. Always on the lookout for new learning
-          opportunities and challenges, my portfolio serves as a playground
-          for my work. It demonstrates my commitment to delivering exceptional
-          digital experiences.
-        </p>
+  <body>
+    <header>
+      <div class="navbar">
+        <img src="./public/assets/logo.png" alt="" class="logo" />
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
-    <section class="about-me container" id="about-me">
-      <div class="content">
-        <h2>About Me</h2>
-        <p>
-          Hello! I’m Catherine, a front-end developer based in Belgium with a
-          vibrant background in marketing and a genuine passion for creating
-          intuitive digital experiences. Over the past nine years, I've honed
-          my skills in HTML, CSS, JavaScript, and React, continually driven by
-          the joy of turning complex problems into elegant solutions.
-        </p>
-        <p>
-          Having studied digital media, I thrive on the challenge of blending
-          technical functionality with aesthetic appeal to make websites that
-          are not only beautiful but truly user-friendly.
-        </p>
-        <p>
-          Feel free to take a look around my portfolio to see the projects I'm
-          most proud of. I love what I do, and I'm excited to share it with
-          you.
-        </p>
-      </div>
-      <div class="my-photo">
-        <div class="colored-photo"></div>
-        <img src="./public/assets/catherine.png" alt="Catherine's photo" />
-      </div>
-    </section>
-    <section id="work">
-      <div class="container">
-        <h2>My Work</h2>
-        <div class="grid">
-          <a href="https://boba-milktea.github.io/dashboard/" target="_blank">
-            <div class="card">
-              <div class="card-img">
-                <img src="./public/assets/dashboard.png" alt="a personal dashboard mini project" />
-              </div>
-              <div class="card-content">
-                <h3>Personal Dashboard</h3>
-                <p>
-                  A simple personal dashboard created using three different
-                  APIs
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="https://boba-milktea.github.io/advice-generator/" target="_blank">
-            <div class="card">
-              <div class="card-img">
-                <img src="./public/assets/advice-generator.png" alt="a simple advice generator application" />
-              </div>
-              <div class="card-content">
-                <h3>Advice Generator</h3>
-                <p>
-                  Seeking valuable life advice? Discover insightful tips here!
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href="https://boba-milktea.github.io/interactive-card-details/" target="_blank">
-            <div class="card">
-              <div class="card-img">
-                <img src="./public/assets/card-form.png" alt="a demo card form project " />
-              </div>
-              <div class="card-content">
-                <h3>Bankcard Form</h3>
-                <p>Unsure about your bank account format? Try this out!</p>
-              </div>
-            </div>
-          </a>
-          <a href="https://boba-milktea.github.io/loopstudios-landing-page/" target="_blank">
-            <div class="card">
-              <div class="card-img">
-                <img src="./public/assets/landing-page.png" alt="a demo landing page about 3D device" />
-              </div>
-              <div class="card-content">
-                <h3>Landing Page</h3>
-                <p>My first landing page using mobile-first workflow.</p>
-              </div>
-            </div>
-          </a>
-          <a href="https://boba-milktea.github.io/Sign-up-form/" target="_blank">
-            <div class="card">
-              <div class="card-img">
-                <img src="./public/assets/sign-up-form.png" alt="a demo sign-up form" />
-              </div>
-              <div class="card-content">
-                <h3>Sign-up form</h3>
-                <p>
-                  Ensure your form entries are correct with real-time,
-                  client-side JavaScript validation
-                </p>
-              </div>
-            </div>
-          </a>
+    </header>
+    <main>
+      <section class="hero">
+        <img
+          src="./public/assets/hero-illustration.png"
+          alt="back and gold paint"
+        />
+        <div class="content">
+          <h1>Hello! <br />I'm Catherine</h1>
+          <p>
+            A passionate web developer with a flair for marketing. I enjoy
+            turning innovative ideas into visually stunning and highly
+            functional websites. Always on the lookout for new learning
+            opportunities and challenges, my portfolio serves as a playground
+            for my work. It demonstrates my commitment to delivering exceptional
+            digital experiences.
+          </p>
         </div>
-      </div>
-      <a href="https://github.com/boba-milktea">More on Github</a>
-    </section>
-    <section id="contact"></section>
-  </main>
-</body>
-
+      </section>
+      <section class="about-me container" id="about-me">
+        <div class="content">
+          <h2>About Me</h2>
+          <p>
+            Hello! I’m Catherine, a front-end developer based in Belgium with a
+            vibrant background in marketing and a genuine passion for creating
+            intuitive digital experiences. Over the past nine years, I've honed
+            my skills in HTML, CSS, JavaScript, and React, continually driven by
+            the joy of turning complex problems into elegant solutions.
+          </p>
+          <p>
+            Having studied digital media, I thrive on the challenge of blending
+            technical functionality with aesthetic appeal to make websites that
+            are not only beautiful but truly user-friendly.
+          </p>
+          <p>
+            Feel free to take a look around my portfolio to see the projects I'm
+            most proud of. I love what I do, and I'm excited to share it with
+            you.
+          </p>
+        </div>
+        <div class="my-photo">
+          <div class="colored-photo"></div>
+          <img src="./public/assets/catherine.png" alt="Catherine's photo" />
+        </div>
+      </section>
+      <section id="work">
+        <div class="container">
+          <h2>My Work</h2>
+          <div class="grid">
+            <a
+              class="card-background"
+              href="https://boba-milktea.github.io/dashboard/"
+              target="_blank"
+            >
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="./public/assets/dashboard.png"
+                    alt="a personal dashboard mini project"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3>Personal Dashboard</h3>
+                  <p>
+                    A simple personal dashboard created using three different
+                    APIs
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a
+              class="card-background"
+              href="https://boba-milktea.github.io/advice-generator/"
+              target="_blank"
+            >
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="./public/assets/advice-generator.png"
+                    alt="a simple advice generator application"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3>Advice Generator</h3>
+                  <p>
+                    Seeking valuable life advice? Discover insightful tips here!
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a
+              class="card-background"
+              href="https://boba-milktea.github.io/interactive-card-details/"
+              target="_blank"
+            >
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="./public/assets/card-form.png"
+                    alt="a demo card form project "
+                  />
+                </div>
+                <div class="card-content">
+                  <h3>Bankcard Form</h3>
+                  <p>Unsure about your bank account format? Try this out!</p>
+                </div>
+              </div>
+            </a>
+            <a
+              class="card-background"
+              href="https://boba-milktea.github.io/loopstudios-landing-page/"
+              target="_blank"
+            >
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="./public/assets/landing-page.png"
+                    alt="a demo landing page about 3D device"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3>Landing Page</h3>
+                  <p>My first landing page using mobile-first workflow.</p>
+                </div>
+              </div>
+            </a>
+            <a
+              class="card-background"
+              href="https://boba-milktea.github.io/Sign-up-form/"
+              target="_blank"
+            >
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="./public/assets/sign-up-form.png"
+                    alt="a demo sign-up form"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3>Sign-up form</h3>
+                  <p>
+                    Ensure your form entries are correct with real-time,
+                    client-side JavaScript validation
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <a
+          target="_blank"
+          class="work-btn"
+          href="https://github.com/boba-milktea"
+          role="button"
+          >More on Github</a
+        >
+      </section>
+      <section id="contact">
+        <div class="container">
+          <h2>Reach Out</h2>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

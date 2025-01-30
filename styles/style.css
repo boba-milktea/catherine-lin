@@ -53,7 +53,7 @@ p {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 19%) 0px 10px 20px, rgba(0, 0, 0, 23%) 0px 6px 6px;
 }
 
 .logo {
@@ -128,7 +128,7 @@ section.hero {
   width: 100%;
   color: white;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 90%);
   animation: fade-out linear;
   animation-timeline: view();
   animation-range: exit -300px;
@@ -154,7 +154,7 @@ h1 {
   align-items: center;
 }
 
-p {
+#about-me p {
   color: var(--text-color);
   margin-top: 1rem;
 }
@@ -180,8 +180,7 @@ p {
   top: 0;
   right: 0;
   border-radius: 50%;
-
-  mask-image: url(../public/assets/mask-video.gif);
+  mask-image: url("../public/assets/mask-video.gif");
   mask-size: cover;
   mask-position: center;
   transform-origin: top;
@@ -199,6 +198,22 @@ p {
   gap: 1em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: 1fr;
+}
+
+#work .card-background,
+#work .work-btn {
+  color: var(--text-color);
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 800;
+  padding: 0.8em 2em;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+#work .card-background {
+  background-color: var(--background-color);
+  border-radius: 8px;
 }
 
 .card {
@@ -211,6 +226,7 @@ p {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
+  box-shadow: 5px 5px 10px #242321;
 }
 
 .card-content {
@@ -248,22 +264,46 @@ p {
   width: 70%;
 }
 
-#work a {
-  background: none;
-  color: var(--text-color);
-  border: none;
-  font-family: "Playfair Display", sans-serif;
-  font-weight: 800;
-  padding: 1em;
-  letter-spacing: 1px;
+#work .card-background:hover {
+  transform: translateY(1px);
+  text-shadow: 3px 2px 2px #0005;
+}
+
+#work .work-btn {
+  margin-top: 1em;
+  background-color: transparent;
   font-size: 1.25rem;
-  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  position: relative;
+  text-decoration: none;
   transition: all 1s;
 }
 
-#work a:hover {
-  transform: translateY(1px);
-  text-shadow: 2px 2px 1px #0005;
+#work .work-btn:hover {
+  font-size: 1.5rem;
+}
+
+.work-btn::before {
+  content: "";
+  opacity: 0;
+  transform: translateY(0);
+  transition: all 1s;
+}
+
+#work .work-btn:hover::before {
+  content: url("../public/assets/hover-gold-2.svg");
+  position: absolute;
+  top: -30px;
+  right: 0px;
+  transform: translateY(10px);
+  opacity: 1;
+}
+
+/* ========= contact ========== */
+#contact .container {
+  margin-top: 2em;
+  height: 600px;
 }
 
 /* ================== animation ================= */
