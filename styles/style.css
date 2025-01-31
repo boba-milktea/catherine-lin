@@ -181,8 +181,8 @@ section.hero {
 }
 
 .hero p {
-  margin-top: 1.25em;
-  max-width: 85%;
+  margin: 1.25em;
+  max-width: 90%;
 }
 
 /* ============ about me section ========= */
@@ -488,6 +488,7 @@ form textarea:focus {
   }
 
   .about-me img {
+    transform-origin: top;
     animation: about-me-animation linear forwards;
   }
 
@@ -568,8 +569,8 @@ form textarea:focus {
   }
 
   #about-me .content {
-    max-width: 600px;
-    padding: 0 1em;
+    width: 450px;
+    margin: 2em;
   }
 
   #work .card-content > p {
@@ -635,8 +636,11 @@ form textarea:focus {
 
   #about-me .content {
     width: 70%;
-    margin: 0;
-    padding: 2em;
+    padding: 2em 6em;
+  }
+
+  #about-me .my-photo {
+    width: 30%;
   }
 
   #work .card-content > p {
