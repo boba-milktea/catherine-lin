@@ -11,7 +11,7 @@
   --text-color: #242321;
   --gold-color: #efbf04;
   --primary-font: "Playfair Display", serif;
-  --secondary-font: Lora, sans-serif;
+  --secondary-font: lora, sans-serif;
 }
 
 body,
@@ -290,22 +290,30 @@ h1 {
 
 /* ========= contact ========== */
 
-#contact .container img {
-  width: 80%;
-  height: 80%;
+#contact {
+  position: relative;
+  overflow-x: clip;
+}
+
+#contact img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.2);
   inset: 0;
-  opacity: 0.3;
+  opacity: 0;
   position: absolute;
-  bottom: 100px;
-  left: 50px;
+  top: 0;
+  left: 0px;
   object-fit: contain;
   z-index: -1;
+  animation: contact-animation linear forwards;
+  animation-timeline: view();
+  animation-range: entry;
 }
 
 #contact .container {
   margin: 2em 0;
-  position: relative;
-  overflow-x: clip;
 }
 
 #contact .contact-form {
@@ -342,7 +350,7 @@ form label {
   margin-top: 1em;
 }
 
-form label:after {
+form label::after {
   content: "*";
   color: red;
 }
@@ -360,13 +368,14 @@ form textarea {
   border: 0.8px solid var(--text-color);
   border-radius: 8px;
 }
-form input:focus,
-form textarea:focus {
-  outline: none;
-}
 
 form textarea {
   resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
 }
 
 form button {
@@ -398,13 +407,12 @@ form button:focus {
   }
 
   .about-me img {
-    transform-origin: top;
     animation: about-me-animation linear forwards;
   }
 }
 
 @keyframes add-animation {
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -414,7 +422,7 @@ form button:focus {
     scale: 1.2;
   }
 
-  to {
+  100% {
     opacity: 0;
   }
 }
@@ -428,6 +436,21 @@ form button:focus {
   100% {
     opacity: 0.2;
     scale: 1.5;
+  }
+}
+
+@keyframes contact-animation {
+  50% {
+    transform: scale(0.5);
+  }
+
+  70% {
+    transform: scale(0.7);
+  }
+
+  100% {
+    opacity: 0.3;
+    transform: scale(1.2);
   }
 }
 
@@ -530,6 +553,10 @@ form button:focus {
 
   #about-me p {
     font-size: 1.3rem;
+  }
+
+  #work .grid {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   }
 
   #contact .contact-form {
