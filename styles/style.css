@@ -59,8 +59,12 @@ p {
 }
 
 .logo {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
+}
+
+.logo img {
+  width: 100%;
 }
 
 .navbar ul {
@@ -364,7 +368,7 @@ form [placeholder] {
 form input,
 form textarea {
   width: 100%;
-  padding: 1em;
+  padding: 0.6em 1em;
   border: 0.8px solid var(--text-color);
   border-radius: 8px;
 }
@@ -395,6 +399,85 @@ form button:hover,
 form button:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--text-color);
   transform: translateY(-0.25em);
+}
+
+/* ========= footer ========== */
+.footer {
+  width: 100%;
+  color: var(--text-color);
+  padding: 1.5em 0;
+  background: linear-gradient(#fff 20%, #d3d3d3 70%, #acabab 95%);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer span {
+  font-family: var(--secondary-font);
+  font-weight: 600;
+}
+
+.footer .email-link {
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  color: var(--text-color);
+  position: relative;
+  transition: all 0.8s ease-in-out;
+}
+
+.footer .email-link:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1.8px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--text-color);
+  transition: all 0.8s ease-in-out;
+}
+
+.footer .email-link:hover:after {
+  width: 100%;
+}
+
+.footer .email-link:active {
+  font-weight: 800;
+}
+
+.footer .footer-logo {
+  width: 5em;
+  height: 5em;
+  padding: 0.5em;
+}
+
+.footer-logo img {
+  width: 100%;
+}
+
+.social-links {
+  margin-top: 0.5em;
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  margin-right: 10px;
+}
+
+.social-links i {
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 2rem;
+  padding: 0 1em;
+  transition: all 0.5s ease-in-out;
+}
+
+.social-links i:hover,
+.social-links i:focus {
+  transform: translateY(-0.2em) scale(1.1);
 }
 
 /* ================== animation ================= */
@@ -506,6 +589,24 @@ form button:focus {
   form [placeholder] {
     font-size: 1rem;
   }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer .footer-text {
+    order: 1;
+  }
+
+  .footer .footer-logo {
+    order: 2;
+  }
+
+  .footer .social-links {
+    order: 3;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -583,5 +684,24 @@ form button:focus {
   form label,
   form [placeholder] {
     font-size: 1.2rem;
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+
+  .footer .footer-text {
+    order: 1;
+  }
+
+  .footer .footer-logo {
+    order: 2;
+  }
+
+  .footer .social-links {
+    order: 3;
   }
 }
