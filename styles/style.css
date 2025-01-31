@@ -9,6 +9,9 @@
 :root {
   --background-color: #efefef;
   --text-color: #242321;
+  --gold-color: #efbf04;
+  --primary-font: "Playfair Display", serif;
+  --secondary-font: Lora, sans-serif;
 }
 
 body,
@@ -24,20 +27,19 @@ html {
 }
 
 h2 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--primary-font);
   color: var(--text-color);
   font-size: 3rem;
 }
 
 h3 {
-  font-family: Lora, sans-serif;
+  font-family: var(--secondary-font);
   font-size: 1.25rem;
   font-weight: 600;
-  color: whitesmoke;
 }
 
 p {
-  font-family: Lora, sans-serif;
+  font-family: var(--secondary-font);
   font-size: 1rem;
   font-weight: 400;
 }
@@ -68,7 +70,7 @@ p {
 ul > li {
   display: inline;
   margin-left: 1em;
-  font-family: "Playfair Display", serif;
+  font-family: var(--primary-font);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -78,7 +80,7 @@ ul > li {
 }
 
 li a {
-  color: #242321;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -135,7 +137,7 @@ section.hero {
 }
 
 h1 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--primary-font);
   font-weight: 800;
   font-size: 8vw;
 }
@@ -204,8 +206,6 @@ h1 {
 #work .card-background,
 #work .work-btn {
   color: var(--text-color);
-  font-family: "Playfair Display", sans-serif;
-  font-weight: 800;
   padding: 0.8em 2em;
   cursor: pointer;
   transition: all 1s;
@@ -226,7 +226,7 @@ h1 {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 5px 5px 10px #242321;
+  box-shadow: 5px 5px 10px var(--text-color);
 }
 
 .card-content {
@@ -255,7 +255,7 @@ h1 {
 }
 
 .card-content h3 {
-  color: #efbf04;
+  color: var(--gold-color);
   margin-top: 15px;
 }
 
@@ -271,39 +271,121 @@ h1 {
 
 #work .work-btn {
   margin-top: 1em;
+  font-family: var(--secondary-font);
   background-color: transparent;
-  font-size: 1.25rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   border-radius: 8px;
   position: relative;
   text-decoration: none;
   transition: all 1s;
+  border: 1.5px solid var(--text-color);
 }
 
-#work .work-btn:hover {
-  font-size: 1.5rem;
-}
-
-.work-btn::before {
-  content: "";
-  opacity: 0;
-  transform: translateY(0);
-  transition: all 1s;
-}
-
-#work .work-btn:hover::before {
-  content: url("../public/assets/hover-gold-2.svg");
-  position: absolute;
-  top: -30px;
-  right: 0px;
-  transform: translateY(10px);
-  opacity: 1;
+#work .work-btn:hover,
+#work .work-btn:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--text-color);
+  transform: translateY(-0.25em);
 }
 
 /* ========= contact ========== */
+
+#contact .container img {
+  width: 80%;
+  height: 80%;
+  inset: 0;
+  opacity: 0.3;
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  object-fit: contain;
+  z-index: -1;
+}
+
 #contact .container {
+  margin: 2em 0;
+  position: relative;
+  overflow-x: clip;
+}
+
+#contact .contact-form {
   margin-top: 2em;
-  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .contact-text {
+  margin: 1em;
+}
+
+.contact-text h3 {
+  margin-bottom: 0.5em;
+}
+
+#contact form {
+  margin-top: 1em;
+  width: 85%;
+  padding: 1em;
+  border: 1px solid var(--background-color);
+  border-radius: 8px;
+  font-family: var(--secondary-font);
+  box-shadow: rgba(50, 50, 93, 25%) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 30%) 0px 3px 7px -3px;
+}
+
+form label {
+  display: block;
+  width: 2em;
+  height: 2em;
+  margin-top: 1em;
+}
+
+form label:after {
+  content: "*";
+  color: red;
+}
+
+form label,
+form [placeholder] {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 1em;
+  border: 0.8px solid var(--text-color);
+  border-radius: 8px;
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+}
+
+form textarea {
+  resize: none;
+}
+
+form button {
+  padding: 0.6em 5em;
+  margin-top: 1em;
+  background-color: transparent;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border: 1.5px solid var(--text-color);
+  font-family: var(--secondary-font);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+form button:hover,
+form button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--text-color);
+  transform: translateY(-0.25em);
 }
 
 /* ================== animation ================= */
@@ -318,8 +400,6 @@ h1 {
   .about-me img {
     transform-origin: top;
     animation: about-me-animation linear forwards;
-    animation-timeline: view();
-    animation-range: exit -300px;
   }
 }
 
@@ -386,6 +466,23 @@ h1 {
   #about-me p {
     font-size: 1.45rem;
   }
+
+  #contact .contact-text {
+    max-width: 800px;
+  }
+
+  #contact h3 {
+    font-size: 1.8rem;
+  }
+
+  #contact p {
+    font-size: 1.3rem;
+  }
+
+  form label,
+  form [placeholder] {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -433,5 +530,31 @@ h1 {
 
   #about-me p {
     font-size: 1.3rem;
+  }
+
+  #contact .contact-form {
+    flex-direction: row;
+  }
+
+  #contact h3 {
+    font-size: 1.8rem;
+  }
+
+  #contact p {
+    font-size: 1.3rem;
+  }
+
+  #contact .contact-text {
+    width: 800px;
+    padding: 0 3em;
+  }
+
+  #contact form {
+    max-width: 600px;
+  }
+
+  form label,
+  form [placeholder] {
+    font-size: 1.2rem;
   }
 }
