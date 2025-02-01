@@ -1,6 +1,6 @@
 # catherine-lin
 
-My portfolio website
+> An interactive and dynamic portfolio website built using HTML and CSS animations, featuring a mobile-first design approach.
 
 ## Table of contents
 
@@ -22,7 +22,9 @@ My portfolio website
 
 ## General info
 
-> A short description
+> This portfolio website is developed using HTML5 and augmented with CSS3 for scroll-triggered animations, ensuring dynamic content presentation.
+>JavaScript is utilized to construct an interactive navigation bar. It's optimized for mobile devices using a mobile-first approach.
+>Future iterations will focus on integrating a parallax scrolling effect
 
 ## Screenshots
 
