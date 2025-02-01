@@ -12,7 +12,6 @@
   --gold-color: #efbf04;
   --primary-font: "Playfair Display", serif;
   --secondary-font: lora, sans-serif;
-  --botton-shadow: ;
 }
 
 body,
@@ -235,7 +234,7 @@ section.hero {
   margin-top: 3em;
   gap: 1em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: 1fr;
 }
 
@@ -351,7 +350,7 @@ section.hero {
 
 #contact form {
   margin-top: 1em;
-  width: 85%;
+  width: 100%;
   padding: 1em;
   border: 1px solid var(--background-color);
   border-radius: 8px;
@@ -578,7 +577,11 @@ form textarea:focus {
   }
 
   #contact .contact-text {
-    max-width: 800px;
+    width: 80%;
+  }
+
+  #contact form {
+    width: 80%;
   }
 
   .footer-content {
@@ -652,12 +655,12 @@ form textarea:focus {
   }
 
   #contact .contact-text {
-    width: 800px;
+    width: 55%;
     padding: 0 3em;
   }
 
   #contact form {
-    max-width: 600px;
+    max-width: 45%;
   }
 
   .footer-content {

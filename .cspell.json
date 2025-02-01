@@ -16,7 +16,8 @@
     "Todos",
     "wireframe",
     "Playfair",
-    "colorised"
+    "colorised",
+    "freedcodecamp"
   ],
   "ignorePaths": [
     "node_modules/**",
