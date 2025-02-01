@@ -17,7 +17,9 @@
     "wireframe",
     "Playfair",
     "colorised",
-    "freedcodecamp"
+    "freedcodecamp",
+    "boba",
+    "milktea"
   ],
   "ignorePaths": [
     "node_modules/**",

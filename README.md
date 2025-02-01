@@ -1,6 +1,7 @@
 # catherine-lin
 
-> An interactive and dynamic portfolio website built using HTML and CSS animations, featuring a mobile-first design approach.
+> An interactive and dynamic portfolio website built using HTML and CSS
+> animations, featuring a mobile-first design approach.
 
 ## Table of contents
 
@@ -22,57 +23,97 @@
 
 ## General info
 
-> This portfolio website is developed using HTML5 and augmented with CSS3 for scroll-triggered animations, ensuring dynamic content presentation.
->JavaScript is utilized to construct an interactive navigation bar. It's optimized for mobile devices using a mobile-first approach.
->Future iterations will focus on integrating a parallax scrolling effect
+> This portfolio website is developed using HTML5 and augmented with CSS3 for
+> scroll-triggered animations, ensuring dynamic content presentation. JavaScript
+> is utilized to construct an interactive navigation bar. It's optimized for
+> mobile devices using a mobile-first approach. Future iterations will focus on
+> integrating a parallax scrolling effect
 
 ## Screenshots
 
-![Example screenshot](./planning/screenshot.jpg)
+![laptop screenshot 1](./planning/screenshot-1.png)
+
+<hr />
+
+![laptop screenshot 2](./planning/screenshot-2.png)
+
+<hr />
+
+![laptop screenshot 3](./planning/screenshot-3.png)
+
+<hr />
+
+<img src="./planning/screenshot-4.jpg" style="width: 400px" alt="mobile screenshot header" />
+<hr />
+
+<img src="./planning/screenshot-5.jpg" style="width: 400px" alt="mobile screenshot header" />
+<hr />
+
+<img src="./planning/screenshot-6.jpg" style="width: 400px" alt="mobile screenshot header" />
 
 ## Technologies
 
 - Node 14.16.0
 - VSC code
 - JavaScript
-- ...
-- ...
+- HTML
+- CSS
 
 ## Setup
 
 - `npm run start`
+- `npm run install`
 
 ## Code Examples
 
 ```js
-// the hello world program
-console.log("Hello World");
+document.addEventListener("scroll", () => {
+  const navBar = document.querySelector(".navbar");
+  if (window.scrollY > 0) {
+    navBar.classList.add("scrolled");
+  } else {
+    navBar.classList.remove("scrolled");
+  }
+});
+```
+
+```css
+@supports (animation-timeline: view()) {
+  .hero img {
+    transform-origin: top;
+    animation: hero-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit -200px;
+  }
+}
 ```
 
 ## Features
 
 List of features ready and Todos for future development
 
--
--
--
+- HTML5 and CSS
+- CSS Scroll Animations
+- JavaScript Navigation
+- Mobile-First Design
 
 To-do list:
 
--
--
+- Parallax Scrolling Effect
+- Accessibility Improvements
+- Performance Optimization
 
 ## Status
 
-Project is: _in progress_
+Project is: _done_
 
 ## Inspiration
 
-Project by freeCodeCamp.org
+CSS animations by Keven Powell
 
 ## Contact
 
-By [Name]
+By [boba-milktea github](https://github.com/boba-milktea)
 
 ## Instructions for use
 
