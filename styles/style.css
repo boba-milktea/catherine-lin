@@ -81,10 +81,12 @@ button {
   margin-block: 1em;
 }
 
-button:hover,
-button:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--text-color);
-  transform: translateY(-0.25em);
+@media (hover: hover) and (pointer: fine) {
+  button:hover,
+  button:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--text-color);
+    transform: translateY(-0.25em);
+  }
 }
 
 /* ============ header ========= */
@@ -135,28 +137,30 @@ li a {
   text-decoration: none;
 }
 
-li:hover {
-  transform: translateY(2px);
-}
+@media (hover: hover) and (pointer: fine) {
+  li:hover {
+    transform: translateY(2px);
+  }
 
-li::after {
-  content: "";
-  opacity: 0;
-  transition: all 0.8s;
-}
+  li::after {
+    content: "";
+    opacity: 0;
+    transition: all 0.8s;
+  }
 
-li:hover::after {
-  content: url("../public/assets/hover-gold.svg");
-  height: 1em;
-  width: 1em;
-  opacity: 1;
-  z-index: -1;
-  position: absolute;
-  left: 10px;
-}
+  li:hover::after {
+    content: url("../public/assets/hover-gold.svg");
+    height: 1em;
+    width: 1em;
+    opacity: 1;
+    z-index: -1;
+    position: absolute;
+    left: 10px;
+  }
 
-li:active {
-  font-weight: 800;
+  li:active {
+    font-weight: 800;
+  }
 }
 
 /* ============ hero section ========= */
