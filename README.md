@@ -62,7 +62,7 @@
 ## Setup
 
 - `npm run start`
-- `npm run install`
+- `npm install`
 
 ## Code Examples
 
