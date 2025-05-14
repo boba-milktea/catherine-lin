@@ -84,7 +84,7 @@
     <section id="my-work" class="container my-work">
       <h2>My Work</h2>
       <div class="grid">
-        <a class="card-background" href="techbibli.netlify.app/" target="_blank">
+        <a class="card-background" href="https://techbibli.netlify.app/" target="_blank">
           <div class="card">
             <div class="card-img">
               <img src="./public/assets/techbibli.png" alt="a website where you can read tech docs" />
@@ -97,7 +97,7 @@
             </div>
           </div>
         </a>
-        <a class="card-background" href="moodcomforter.netlify.app/" target="_blank">
+        <a class="card-background" href="https://moodcomforter.netlify.app/" target="_blank">
           <div class="card">
             <div class="card-img">
               <img src="./public/assets/mood-comforter.png" alt="an application to comfort your mood" />
@@ -123,7 +123,7 @@
             </div>
           </div>
         </a>
-        <a class="card-background" href="boba-milktea.github.io/weather-forecast/" target="_blank">
+        <a class="card-background" href="https://boba-milktea.github.io/weather-forecast/" target="_blank">
           <div class="card">
             <div class="card-img">
               <img src="./public/assets/weather.png"
@@ -260,34 +260,35 @@
       );
     });
 
-      // remove navigation bar links active effect after 500ms
+    // remove navigation bar links active effect after 500ms
 
-      document.querySelectorAll("li").forEach((link) => {
-        link.addEventListener("touchstart", () => {
-          link.classList.remove("touch-nonactive");
-          link.classList.add("touch-active");
-          setTimeout(() => {
-            link.classList.remove("touch-active");
-            link.classList.add("touch-nonactive");
-          }, 500);
-        });
+    document.querySelectorAll("li").forEach((link) => {
+      link.addEventListener("touchstart", () => {
+        link.classList.remove("touch-nonactive");
+        link.classList.add("touch-active");
+        setTimeout(() => {
+          link.classList.remove("touch-active");
+          link.classList.add("touch-nonactive");
+        }, 500);
       });
+    });
 
-      // Work section button - instead of anchor tag button, a click function is used.
-      document.getElementById("work-btn").addEventListener("click", () => {
-        window.open(
-          "https://github.com/boba-milktea",
-          "_blank",
-          "noopener,noreferrer"
-        );
-      });
+    // Work section button - instead of anchor tag button, a click function is used.
+    document.getElementById("work-btn").addEventListener("click", () => {
+      window.open(
+        "https://github.com/boba-milktea",
+        "_blank",
+        "noopener,noreferrer"
+      );
+    });
 
-      //clear the form after submission
-      window.onbeforeunload = () => {
-        for (const form of document.getElementsByTagName("form")) {
-          form.reset();
-        }
-      };
-    </script>
-  </body>
+    //clear the form after submission
+    window.onbeforeunload = () => {
+      for (const form of document.getElementsByTagName("form")) {
+        form.reset();
+      }
+    };
+  </script>
+</body>
+
 </html>
