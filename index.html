@@ -260,13 +260,34 @@
       );
     });
 
-    //clear a form after submission
-    window.onbeforeunload = () => {
-      for (const form of document.getElementsByTagName("form")) {
-        form.reset();
-      }
-    };
-  </script>
-</body>
+      // remove navigation bar links active effect after 500ms
 
+      document.querySelectorAll("li").forEach((link) => {
+        link.addEventListener("touchstart", () => {
+          link.classList.remove("touch-nonactive");
+          link.classList.add("touch-active");
+          setTimeout(() => {
+            link.classList.remove("touch-active");
+            link.classList.add("touch-nonactive");
+          }, 500);
+        });
+      });
+
+      // Work section button - instead of anchor tag button, a click function is used.
+      document.getElementById("work-btn").addEventListener("click", () => {
+        window.open(
+          "https://github.com/boba-milktea",
+          "_blank",
+          "noopener,noreferrer"
+        );
+      });
+
+      //clear the form after submission
+      window.onbeforeunload = () => {
+        for (const form of document.getElementsByTagName("form")) {
+          form.reset();
+        }
+      };
+    </script>
+  </body>
 </html>
